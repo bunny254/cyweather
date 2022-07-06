@@ -30,7 +30,7 @@ const NavBar = () => {
         </div>
         <div className="block md:hidden" onClick={mobHandle}>
           {/*Importing Menu Icon from React-icons and Setting State*/}
-          {!mobNav ? <AiOutlineClose size='25px' className="flex my-4 cursor-pointer"
+          {!mobNav ? <AiOutlineClose size='25px' className="flex cursor-pointer"
             color="white"/>:<FiMenu
             className="flex my-4 cursor-pointer"
             color="white"
