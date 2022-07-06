@@ -11,13 +11,16 @@ const NavBar = () => {
   const mobHandle=()=>{
     setMobNav(!mobNav)
   }
+  const escapeNav=()=>{
+    setMobNav(false);
+  }
   return (
     <div>
       <div className="flex bg-green-900 bg-opacity-80">
         <div className="flex flex-row flex-1 pr-40 align-middle justify-center my-4">
           <h1 className="text-white pr-12 cursor-pointer font-bold text-xl mr-20">CyWeather</h1>
         </div>
-        <div className=" flex my-4 flex-2 pr-80">
+        <div className="  my-4 flex-2 pr-80 hidden md:flex">
           <a className="text-white  mx-3" href="#">
             Home
           </a>
@@ -25,9 +28,10 @@ const NavBar = () => {
             Get Forecast
           </a>
         </div>
-        <div className="flex flex-3 pr-40" onClick={mobHandle}>
+        <div className="block md:hidden" onClick={mobHandle}>
           {/*Importing Menu Icon from React-icons and Setting State*/}
-          {!mobNav ? <AiOutlineClose size='25px'/>:<FiMenu
+          {!mobNav ? <AiOutlineClose size='25px' className="flex my-4 cursor-pointer"
+            color="white"/>:<FiMenu
             className="flex my-4 cursor-pointer"
             color="white"
             size="25px"
@@ -36,9 +40,9 @@ const NavBar = () => {
         <div className={!mobNav ? 'bg-black fixed left-0 top-0 w-[60%] h-full  border-r ease-in-out duration-500' : 'fixed left-[-100%]'}>
         <h1 className="m-4 text-green-900 cursor-pointer font-bold text-xl ">CyWeather</h1>
           <ul className="uppercase text-white">
-            <li className="p-4 border-b ">Home</li>
-            <li className="p-4 border-b">Get Forecast</li>
-            <li className="p-4">Hourly Forecast</li>
+            <li className="p-4 border-b "><a href="#">Home</a></li>
+            <li className="p-4 border-b"><a href="#">Get Forecast</a></li>
+            <li className="p-4"><a href="#">Hourly Forecast</a></li>
           </ul>
         </div>
       </div>
