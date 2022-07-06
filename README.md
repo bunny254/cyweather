@@ -22,3 +22,7 @@ Once the Application is running scroll through to the Get Forecast Section
 Test Values: Longitude(-1.125) Latitude (36.625) and press Enter after entering the Latitude value.
 
 You Should be Able to See the Current Weather and Scroll Down to Hourly Forcast where you can Scroll Left using the Buttons below.
+
+
+*****DEVICES **************
+Use Desktop for a Responsive View.
